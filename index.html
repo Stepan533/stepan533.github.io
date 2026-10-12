@@ -22,7 +22,6 @@
     background: var(--cream);
   }
   
-  /* NAV */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -67,7 +66,6 @@
   
   nav a:hover { color: var(--gold); }
   
-  /* HERO */
   .hero-wrap {
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
     min-height: 100vh;
@@ -167,7 +165,6 @@
     z-index: 0;
   }
   
-  /* BUTTONS */
   .btn {
     display: inline-block;
     padding: 16px 40px;
@@ -202,7 +199,6 @@
     border-color: #fff;
   }
   
-  /* SECTIONS */
   section { padding: 90px 20px; }
   .container { max-width: 1150px; margin: 0 auto; }
   
@@ -232,7 +228,6 @@
     font-size: 1.08rem;
   }
   
-  /* ABOUT */
   .about-me {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
@@ -288,7 +283,6 @@
     text-transform: uppercase;
   }
   
-  /* SERVICES */
   .services { background: #fff; }
   
   .services-grid {
@@ -364,7 +358,6 @@
     font-size: 0.9rem;
   }
   
-  /* CONTACTS */
   .contacts {
     background: linear-gradient(135deg, var(--dark), var(--deep));
     color: #fff;
@@ -425,7 +418,6 @@
     font-weight: 500;
   }
   
-  /* FORM */
   form {
     display: flex;
     flex-direction: column;
@@ -473,29 +465,6 @@
     transform: translateY(-2px);
   }
   
-  .form-status {
-    text-align: center;
-    padding: 12px;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    display: none;
-  }
-  
-  .form-status.success {
-    display: block;
-    background: rgba(76, 175, 80, 0.15);
-    color: #a5d6a7;
-    border: 1px solid rgba(76, 175, 80, 0.4);
-  }
-  
-  .form-status.error {
-    display: block;
-    background: rgba(244, 67, 54, 0.15);
-    color: #ef9a9a;
-    border: 1px solid rgba(244, 67, 54, 0.4);
-  }
-  
-  /* FOOTER */
   footer {
     background: #0a0a15;
     color: #8b95a5;
@@ -506,7 +475,6 @@
   
   footer a { color: var(--gold); text-decoration: none; }
   
-  /* WHATSAPP */
   .whatsapp-float {
     position: fixed;
     bottom: 25px;
@@ -529,7 +497,6 @@
     transform: scale(1.1);
   }
   
-  /* RESPONSIVE */
   @media (max-width: 850px) {
     nav ul { display: none; }
     .hero {
@@ -550,7 +517,6 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav id="navbar">
   <div class="logo">Степан <span>Годына</span></div>
   <ul>
@@ -560,7 +526,6 @@
   </ul>
 </nav>
 
-<!-- HERO -->
 <div class="hero-wrap">
   <header class="hero">
     <div class="hero-text">
@@ -579,7 +544,6 @@
   </header>
 </div>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="container">
     <h2>Обо мне</h2>
@@ -595,25 +559,15 @@
         <p>Провожу обучение в Баку и онлайн. Помогаю людям снизить стресс, обрести внутреннюю устойчивость и лучше понимать себя через ведические знания — без мистики и лишних усложнений.</p>
         <p>Моя задача — дать практичные инструменты, которые работают с первого дня и остаются с вами на всю жизнь.</p>
         <div class="stats">
-          <div class="stat">
-            <span class="num">3</span>
-            <span class="label">направления</span>
-          </div>
-          <div class="stat">
-            <span class="num">20</span>
-            <span class="label">мин в день</span>
-          </div>
-          <div class="stat">
-            <span class="num">Баку</span>
-            <span class="label">и онлайн</span>
-          </div>
+          <div class="stat"><span class="num">3</span><span class="label">направления</span></div>
+          <div class="stat"><span class="num">20</span><span class="label">мин в день</span></div>
+          <div class="stat"><span class="num">Баку</span><span class="label">и онлайн</span></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
 <section class="services" id="services">
   <div class="container">
     <h2>Направления</h2>
@@ -631,7 +585,7 @@
           <li>Пожизненная поддержка</li>
         </ul>
         <span class="price">20 минут · 2 раза в день</span>
-        <a href="#contacts" class="btn" onclick="selectService('ТМ')">Записаться</a>
+        <a href="#contacts" class="btn">Записаться</a>
       </div>
       
       <div class="service">
@@ -645,7 +599,7 @@
           <li>Для всех уровней</li>
         </ul>
         <span class="price">45–60 минут</span>
-        <a href="#contacts" class="btn" onclick="selectService('Йога-асаны')">Записаться</a>
+        <a href="#contacts" class="btn">Записаться</a>
       </div>
       
       <div class="service">
@@ -659,13 +613,12 @@
           <li>Онлайн или лично</li>
         </ul>
         <span class="price">Индивидуально</span>
-        <a href="#contacts" class="btn" onclick="selectService('Джйотиш')">Записаться</a>
+        <a href="#contacts" class="btn">Записаться</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACTS -->
 <section class="contacts" id="contacts">
   <div class="container">
     <h2>Связаться со мной</h2>
@@ -709,7 +662,7 @@
       </div>
       
       <div>
-        <form id="contactForm" action="https://formspree.io/f/mdealabq" method="POST">
+        <form action="https://formspree.io/f/mdealabq" method="POST">
           <input type="text" name="Имя" placeholder="Ваше имя" required>
           <input type="email" name="Email" placeholder="Ваш Email" required>
           <input type="tel" name="Телефон" placeholder="Телефон / WhatsApp">
@@ -725,10 +678,8 @@
           <textarea name="Сообщение" rows="4" placeholder="Ваш вопрос или удобное время для связи"></textarea>
           
           <input type="hidden" name="_subject" value="Новая заявка с сайта ТМ">
-          <input type="hidden" name="_replyto" value="">
           
           <button type="submit">Отправить заявку</button>
-          <div class="form-status" id="formStatus"></div>
         </form>
       </div>
     </div>
@@ -756,51 +707,6 @@
       const target = document.querySelector(href);
       if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
-  });
-  
-  function selectService(name) {
-    const select = document.querySelector('select[name="Направление"]');
-    if (!select) return;
-    for (let opt of select.options) {
-      if (opt.value.toLowerCase().includes(name.toLowerCase()) || 
-          opt.text.toLowerCase().includes(name.toLowerCase())) {
-        select.value = opt.value;
-        break;
-      }
-    }
-  }
-  
-  const form = document.getElementById('contactForm');
-  const status = document.getElementById('formStatus');
-  
-  form.addEventListener('submit', async e => {
-    e.preventDefault();
-    const userEmail = form.querySelector('input[name="Email"]').value;
-    form.querySelector('input[name="_replyto"]').value = userEmail;
-    
-    const data = new FormData(form);
-    status.className = 'form-status';
-    status.textContent = 'Отправляем...';
-    status.style.display = 'block';
-    
-    try {
-      const response = await fetch(form.action, {
-        method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      });
-      
-      if (response.ok) {
-        status.className = 'form-status success';
-        status.textContent = '✓ Спасибо! Ваша заявка отправлена. Я свяжусь с вами в ближайшее время.';
-        form.reset();
-      } else {
-        throw new Error('Ошибка');
-      }
-    } catch (err) {
-      status.className = 'form-status error';
-      status.textContent = '✗ Не удалось отправить. Напишите в WhatsApp: +994 50 533 16 29';
-    }
   });
 </script>
 
