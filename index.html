@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Годына Степан — Трансцендентальная медитация, Йога-асаны, Джйотиш в Баку</title>
+<meta name="description" content="Годына Степан — учитель Трансцендентальной медитации в Баку. Йога-асаны Махариши, Джйотиш. Запись на обучение.">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  :root {
+    --gold: #e6b45a;
+    --dark: #1a1a2e;
+    --deep: #0f3460;
+    --cream: #f8f6f1;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background: var(--cream);
+  }
+  
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: all 0.3s;
+  }
+  
+  nav.scrolled {
+    background: rgba(26, 26, 46, 0.96);
+    backdrop-filter: blur(10px);
+    padding: 14px 40px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  }
+  
+  nav .logo {
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+  
+  nav .logo span { color: var(--gold); }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.92rem;
+    transition: color 0.3s;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  }
+  
+  nav a:hover { color: var(--gold); }
+  
+  /* HERO */
+  .hero-wrap {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-wrap::before {
+    content: '';
+    position: absolute;
+    width: 700px; height: 700px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(230, 180, 90, 0.13), transparent 70%);
+    top: -250px; right: -250px;
+    animation: pulse 7s ease-in-out infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.15); opacity: 1; }
+  }
+  
+  .hero {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 130px 40px 60px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hero-text { color: #fff; }
+  
+  .hero .om {
+    font-size: 3rem;
+    color: var(--gold);
+    margin-bottom: 15px;
+    animation: float 4s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  .hero h1 {
+    font-size: clamp(1.9rem, 4vw, 3.2rem);
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+  }
+  
+  .hero h1 span { color: var(--gold); font-weight: 600; }
+  
+  .hero .name {
+    font-size: 0.95rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 25px;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+    max-width: 550px;
+    margin-bottom: 35px;
+    opacity: 0.9;
+  }
+  
+  .hero-photo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-photo img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 20px;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.5);
+    position: relative;
+    z-index: 2;
+    border: 1px solid rgba(230, 180, 90, 0.3);
+  }
+  
+  .hero-photo::after {
+    content: '';
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    background: radial-gradient(circle, rgba(230, 180, 90, 0.25), transparent 70%);
+    filter: blur(50px);
+    z-index: 0;
+  }
+  
+  /* BUTTONS */
+  .btn {
+    display: inline-block;
+    padding: 16px 40px;
+    background: var(--gold);
+    color: var(--dark);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .btn:hover {
+    background: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(230, 180, 90, 0.4);
+  }
+  
+  .btn-outline {
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgba(255,255,255,0.4);
+    margin-left: 12px;
+  }
+  
+  .btn-outline:hover {
+    background: #fff;
+    color: var(--dark);
+    border-color: #fff;
+  }
+  
+  /* SECTIONS */
+  section { padding: 90px 20px; }
+  .container { max-width: 1150px; margin: 0 auto; }
+  
+  h2 {
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    color: var(--dark);
+  }
+  
+  h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--gold);
+    margin: 15px auto 0;
+  }
+  
+  .subtitle {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 55px;
+    color: #666;
+    font-size: 1.08rem;
+  }
+  
+  /* ABOUT */
+  .about-me {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 50px;
+    align-items: center;
+  }
+  
+  .about-me .photo {
+    aspect-ratio: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(15, 52, 96, 0.3);
+    position: relative;
+  }
+  
+  .about-me .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .about-me .text h3 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: var(--dark);
+  }
+  
+  .about-me .text p {
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 1.02rem;
+  }
+  
+  .stats {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .stat .num {
+    font-size: 1.8rem;
+    color: var(--gold);
+    font-weight: 700;
+    display: block;
+  }
+  
+  .stat .label {
+    font-size: 0.85rem;
+    color: #888;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  /* SERVICES */
+  .services { background: #fff; }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+  .service {
+    background: var(--cream);
+    padding: 45px 35px;
+    border-radius: 16px;
+    transition: all 0.35s;
+    border-top: 4px solid var(--gold);
+  }
+  
+  .service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(15, 52, 96, 0.15);
+  }
+  
+  .service .icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: block;
+  }
+  
+  .service h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--dark);
+    font-weight: 500;
+  }
+  
+  .service p {
+    color: #555;
+    font-size: 0.98rem;
+    margin-bottom: 20px;
+  }
+  
+  .service ul {
+    list-style: none;
+    margin-bottom: 25px;
+  }
+  
+  .service li {
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 8px;
+    color: #444;
+    font-size: 0.95rem;
+  }
+  
+  .service li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-weight: 700;
+  }
+  
+  .service .price {
+    font-size: 1.1rem;
+    color: var(--deep);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  .service .btn {
+    padding: 12px 28px;
+    font-size: 0.9rem;
+  }
+  
+  /* CONTACTS */
+  .contacts {
+    background: linear-gradient(135deg, var(--dark), var(--deep));
+    color: #fff;
+  }
+  
+  .contacts h2 { color: #fff; }
+  .contacts .subtitle { color: #b8c1d1; }
+  
+  .contacts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-top: 40px;
+  }
+  
+  .contact-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    color: var(--gold);
+    font-weight: 500;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 22px;
+    padding: 18px 22px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(230, 180, 90, 0.15);
+    transition: all 0.3s;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .contact-item:hover {
+    background: rgba(230, 180, 90, 0.1);
+    border-color: var(--gold);
+    transform: translateX(5px);
+  }
+  
+  .contact-item .ci-icon {
+    font-size: 1.6rem;
+    width: 45px;
+    text-align: center;
+  }
+  
+  .contact-item .ci-label {
+    font-size: 0.82rem;
+    color: #8b95a5;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .contact-item .ci-value {
+    font-size: 1.05rem;
+    font-weight: 500;
+  }
+  
+  /* FORM */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  input, textarea, select {
+    padding: 15px 20px;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s;
+  }
+  
+  select { cursor: pointer; }
+  select option { background: var(--dark); color: #fff; }
+  
+  input::placeholder, textarea::placeholder { color: #8b95a5; }
+  
+  input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--gold);
+    background: rgba(255,255,255,0.08);
+  }
+  
+  form button {
+    padding: 16px;
+    background: var(--gold);
+    color: var(--dark);
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    margin-top: 5px;
+  }
+  
+  form button:hover {
+    background: #fff;
+    transform: translateY(-2px);
+  }
+  
+  .form-status {
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    display: none;
+  }
+  
+  .form-status.success {
+    display: block;
+    background: rgba(76, 175, 80, 0.15);
+    color: #a5d6a7;
+    border: 1px solid rgba(76, 175, 80, 0.4);
+  }
+  
+  .form-status.error {
+    display: block;
+    background: rgba(244, 67, 54, 0.15);
+    color: #ef9a9a;
+    border: 1px solid rgba(244, 67, 54, 0.4);
+  }
+  
+  /* FOOTER */
+  footer {
+    background: #0a0a15;
+    color: #8b95a5;
+    text-align: center;
+    padding: 35px 20px;
+    font-size: 0.9rem;
+  }
+  
+  footer a { color: var(--gold); text-decoration: none; }
+  
+  /* WHATSAPP */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 20px rgba(37, 211, 102, 0.5);
+    z-index: 99;
+    transition: all 0.3s;
+    text-decoration: none;
+    font-size: 1.8rem;
+  }
+  
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 850px) {
+    nav ul { display: none; }
+    .hero {
+      grid-template-columns: 1fr;
+      padding: 110px 25px 50px;
+      text-align: center;
+    }
+    .hero p { margin-left: auto; margin-right: auto; }
+    .hero-photo { order: -1; margin-bottom: 20px; }
+    .hero-photo img { max-width: 300px; }
+    .about-me { grid-template-columns: 1fr; }
+    .about-me .photo { max-width: 320px; margin: 0 auto; }
+    .contacts-grid { grid-template-columns: 1fr; gap: 35px; }
+    .btn-outline { margin-left: 0; margin-top: 12px; }
+    section { padding: 65px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="logo">Степан <span>Годына</span></div>
+  <ul>
+    <li><a href="#about">Обо мне</a></li>
+    <li><a href="#services">Направления</a></li>
+    <li><a href="#contacts">Контакты</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero-wrap">
+  <header class="hero">
+    <div class="hero-text">
+      <div class="om">ॐ</div>
+      <div class="name">Годына Степан · Баку</div>
+      <h1>Трансцендентальная<br><span>медитация</span></h1>
+      <p>Обучение ТМ, йога-асанам Махариши и Джйотиш — путь к гармонии тела, ума и судьбы под руководством сертифицированного учителя.</p>
+      <div>
+        <a href="#contacts" class="btn">Записаться</a>
+        <a href="https://wa.me/994505331629" target="_blank" class="btn btn-outline">WhatsApp</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="photo2.png" alt="Годына Степан — учитель трансцендентальной медитации в Баку">
+    </div>
+  </header>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <h2>Обо мне</h2>
+    <p class="subtitle">Учу древним ведическим практикам в современном и понятном виде</p>
+    
+    <div class="about-me">
+      <div class="photo">
+        <img src="photo1.png" alt="Годына Степан">
+      </div>
+      <div class="text">
+        <h3>Годына Степан, 30 лет</h3>
+        <p>Сертифицированный учитель <strong>Трансцендентальной медитации</strong>, преподаватель <strong>йога-асан Махариши</strong> и практикующий <strong>джйотиш-астролог</strong>.</p>
+        <p>Провожу обучение в Баку и онлайн. Помогаю людям снизить стресс, обрести внутреннюю устойчивость и лучше понимать себя через ведические знания — без мистики и лишних усложнений.</p>
+        <p>Моя задача — дать практичные инструменты, которые работают с первого дня и остаются с вами на всю жизнь.</p>
+        <div class="stats">
+          <div class="stat">
+            <span class="num">3</span>
+            <span class="label">направления</span>
+          </div>
+          <div class="stat">
+            <span class="num">20</span>
+            <span class="label">мин в день</span>
+          </div>
+          <div class="stat">
+            <span class="num">Баку</span>
+            <span class="label">и онлайн</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <h2>Направления</h2>
+    <p class="subtitle">Выберите то, что вам ближе — или начните с консультации</p>
+    
+    <div class="services-grid">
+      <div class="service">
+        <span class="icon">🧘‍♂️</span>
+        <h3>Трансцендентальная медитация</h3>
+        <p>Классическая техника по методу Махариши Махеш Йоги — простая, научно обоснованная, без усилий.</p>
+        <ul>
+          <li>Личная передача мантры</li>
+          <li>Курс из 4 занятий</li>
+          <li>Проверки практики</li>
+          <li>Пожизненная поддержка</li>
+        </ul>
+        <span class="price">20 минут · 2 раза в день</span>
+        <a href="#contacts" class="btn" onclick="selectService('ТМ')">Записаться</a>
+      </div>
+      
+      <div class="service">
+        <span class="icon">🕉️</span>
+        <h3>Йога-асаны Махариши</h3>
+        <p>Комплекс асан, рекомендованных Махариши для практикующих медитацию — мягко, безопасно, эффективно.</p>
+        <ul>
+          <li>Индивидуальные занятия</li>
+          <li>Групповые классы</li>
+          <li>Разбор вашей практики</li>
+          <li>Для всех уровней</li>
+        </ul>
+        <span class="price">45–60 минут</span>
+        <a href="#contacts" class="btn" onclick="selectService('Йога-асаны')">Записаться</a>
+      </div>
+      
+      <div class="service">
+        <span class="icon">✨</span>
+        <h3>Джйотиш — ведическая астрология</h3>
+        <p>Разбор вашей карты рождения: сильные стороны, кармические задачи, благоприятные периоды жизни.</p>
+        <ul>
+          <li>Персональная консультация</li>
+          <li>Разбор натальной карты</li>
+          <li>Практические рекомендации</li>
+          <li>Онлайн или лично</li>
+        </ul>
+        <span class="price">Индивидуально</span>
+        <a href="#contacts" class="btn" onclick="selectService('Джйотиш')">Записаться</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTS -->
+<section class="contacts" id="contacts">
+  <div class="container">
+    <h2>Связаться со мной</h2>
+    <p class="subtitle">Оставьте заявку — я свяжусь с вами лично в течение 24 часов</p>
+    
+    <div class="contacts-grid">
+      <div class="contact-info">
+        <h3>Мои контакты</h3>
+        
+        <a href="tel:+994505331629" class="contact-item">
+          <span class="ci-icon">📞</span>
+          <div>
+            <div class="ci-label">Телефон</div>
+            <div class="ci-value">+994 50 533 16 29</div>
+          </div>
+        </a>
+        
+        <a href="https://wa.me/994505331629" target="_blank" class="contact-item">
+          <span class="ci-icon">💬</span>
+          <div>
+            <div class="ci-label">WhatsApp</div>
+            <div class="ci-value">+994 50 533 16 29</div>
+          </div>
+        </a>
+        
+        <a href="mailto:stepan0902@yahoo.com" class="contact-item">
+          <span class="ci-icon">✉️</span>
+          <div>
+            <div class="ci-label">Email</div>
+            <div class="ci-value">stepan0902@yahoo.com</div>
+          </div>
+        </a>
+        
+        <div class="contact-item">
+          <span class="ci-icon">📍</span>
+          <div>
+            <div class="ci-label">Где провожу</div>
+            <div class="ci-value">Баку · онлайн (весь мир)</div>
+          </div>
+        </div>
+      </div>
+      
+      <div>
+        <form id="contactForm" action="https://formspree.io/f/xzzbqkyn" method="POST">
+          <input type="text" name="Имя" placeholder="Ваше имя" required>
+          <input type="email" name="Email" placeholder="Ваш Email" required>
+          <input type="tel" name="Телефон" placeholder="Телефон / WhatsApp">
+          
+          <select name="Направление" required>
+            <option value="">Выберите направление...</option>
+            <option value="Трансцендентальная медитация">Трансцендентальная медитация</option>
+            <option value="Йога-асаны Махариши">Йога-асаны Махариши</option>
+            <option value="Джйотиш">Джйотиш (астрология)</option>
+            <option value="Всё сразу / консультация">Всё сразу / консультация</option>
+          </select>
+          
+          <textarea name="Сообщение" rows="4" placeholder="Ваш вопрос или удобное время для связи"></textarea>
+          
+          <input type="hidden" name="_subject" value="Новая заявка с сайта ТМ">
+          <input type="hidden" name="_replyto" value="">
+          
+          <button type="submit">Отправить заявку</button>
+          <div class="form-status" id="formStatus"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Годына Степан · Трансцендентальная медитация, Йога-асаны, Джйотиш · Баку</p>
+  <p style="margin-top:10px; font-size:0.85rem;">Телефон и WhatsApp: <a href="tel:+994505331629">+994 50 533 16 29</a> · Email: <a href="mailto:stepan0902@yahoo.com">stepan0902@yahoo.com</a></p>
+</footer>
+
+<a href="https://wa.me/994505331629" target="_blank" class="whatsapp-float" title="Написать в WhatsApp">💬</a>
+
+<script>
+  const nav = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+  });
+  
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (href === '#') return;
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+  
+  function selectService(name) {
+    const select = document.querySelector('select[name="Направление"]');
+    if (!select) return;
+    for (let opt of select.options) {
+      if (opt.value.toLowerCase().includes(name.toLowerCase()) || 
+          opt.text.toLowerCase().includes(name.toLowerCase())) {
+        select.value = opt.value;
+        break;
+      }
+    }
+  }
+  
+  const form = document.getElementById('contactForm');
+  const status = document.getElementById('formStatus');
+  
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const userEmail = form.querySelector('input[name="Email"]').value;
+    form.querySelector('input[name="_replyto"]').value = userEmail;
+    
+    const data = new FormData(form);
+    status.className = 'form-status';
+    status.textContent = 'Отправляем...';
+    status.style.display = 'block';
+    
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+      
+      if (response.ok) {
+        status.className = 'form-status success';
+        status.textContent = '✓ Спасибо! Ваша заявка отправлена. Я свяжусь с вами в ближайшее время.';
+        form.reset();
+      } else {
+        throw new Error('Ошибка');
+      }
+    } catch (err) {
+      status.className = 'form-status error';
+      status.textContent = '✗ Не удалось отправить. Напишите в WhatsApp: +994 50 533 16 29';
+    }
+  });
+</script>
+
+</body>
+</html>
